@@ -1,0 +1,40 @@
+type Query {
+    getItem(id: String!): Item!
+	allItems: [Item]
+}
+
+type Subscription {
+    addedItem: Item
+    @aws_subscribe(mutations: ["addItem"])
+    updatedItem: Item
+    @aws_subscribe(mutations: ["updatedItem"])
+    deletedItem: Item
+    @aws_subscribe(mutations: ["deleteItem"])
+}
+
+type Mutation {
+    addItem(input: ItemInput): Item!
+    
+    updateItem( id: String!, input: ItemInput ): Item
+    
+    deleteItem(id: String!): String!
+}
+
+input ItemInput {
+    text: String,
+    description: String
+    checked: Boolean
+}
+
+type Item {
+	id: String!
+    text: String
+    description: String
+    checked: Boolean
+}
+
+schema {
+    query: Query
+    mutation: Mutation
+    subscription: Subscription
+}
