@@ -1,6 +1,6 @@
 # Serverless-React-Amplify-Cognito-Appsync-App
 
-![Architecture]()
+![Architecture](https://github.com/nitor-infotech-oss/aws-serverless-starter-kit/blob/master/Serverless-AWS-Amplify-Cognito-Appsync.png)
 
 
 ##### This Component will be used as reference implementation or starter kit for micro-services based implementation for React APP in serverless way. It can be used to deploy any API.
@@ -32,7 +32,7 @@
 ### Clone repository on local using 
 
 ```bash
-git clone ""
+git clone "https://github.com/nitor-infotech-oss/aws-serverless-starter-kit.git"
 ```
 
 
